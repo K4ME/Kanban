@@ -20,10 +20,14 @@ npm install
 Para rodar o projeto
 npm run dev
 
+Instalando styled-components
+npm install styled-components
+npm i -D @types/styled-components
+
 ## TODO
 
 [] Instalar pacote de icones
-[] Instalar staledcomponents
+[X] Instalar styled-components
 [] Instalar toastify
 [] Decidir cores do disign (amarelo e preto)
 [] Criar componente NewCard
