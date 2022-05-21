@@ -1,12 +1,12 @@
-import  GlobalStyle  from './Styles/global'
-import NewCard from './Components/NewCard'
+import GlobalStyle from './Styles/global'
+import Board from './Components/Board/Index'
 
 function App() {
   return (
-    <div className="App">
+    <>
       <GlobalStyle/>
-      <NewCard/>
-    </div>
+      <Board />
+    </>
   )
 }
 
