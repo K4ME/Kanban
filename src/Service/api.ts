@@ -11,7 +11,6 @@ async function getToken() {
   try {
     const response = await axios.post('http://localhost:5000/login/', 
     { "login":"letscode", "senha":"lets@123"});
-    console.log(response.data);
     return response.data;
   } catch (error) {
     console.error(error);
@@ -24,7 +23,6 @@ export async function getCards() {
     {headers: {
       'Authorization': `Bearer ${await getToken()}`
     }});
-    console.log(response);
     return response.data;
   } catch (error) {
     console.error(error);
@@ -38,7 +36,6 @@ export async function createCard(data: cardType) {
     {headers: {
       'Authorization': `Bearer ${await getToken()}`
     }});
-    console.log(response);
     return response.data;
   } catch (error) {
     console.error(error);
@@ -52,7 +49,6 @@ export async function updateCard(data: cardType) {
     {headers: {
       'Authorization': `Bearer ${await getToken()}`
     }});
-    console.log(response);
     return response.data;
   } catch (error) {
     console.error(error);
@@ -65,7 +61,6 @@ export async function deleteCard(id: string) {
     {headers: {
       'Authorization': `Bearer ${await getToken()}`
     }});
-    console.log(response);
     return response.data;
   } catch (error) {
     console.error(error);

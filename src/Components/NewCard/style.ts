@@ -11,6 +11,7 @@ export const Container = styled.section`
   height: 12rem;
   background-color: #757575;
   border-radius: 0.313rem;
+  margin-top: 2rem;
 `;
 
 export const Input = styled.input`

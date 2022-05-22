@@ -1,12 +1,16 @@
 import React, {useState} from 'react'
 import { Plus } from "phosphor-react";
 
+import { ToastContainer, toast } from 'react-toastify';
+
 import {Container, Input, TextArea, PlusButton} from './style';
 import { createCard } from '../../Service/api';
 
-export default function NewCard() {
+export default function NewCard({cardAdd}: any) {
   const [title, setTitle] = useState<string>('');
   const [content, setContent] = useState<string>('');
+
+  //const sucesso = () => toast.success("sucesso", {autoClose: 2000});
 
   const handleTitleChange = (value: string) => {
     console.log(value);
@@ -29,6 +33,8 @@ export default function NewCard() {
 
     if(response){
       console.log('sucesso');
+      //sucesso();
+      cardAdd(true);
       setTitle('');
       setContent('');
     }
@@ -42,6 +48,8 @@ export default function NewCard() {
       <PlusButton onClick={submitCard}>
         <Plus size={32} weight="bold" />
       </PlusButton>
+      <ToastContainer />
     </Container>
+    
   )
 }

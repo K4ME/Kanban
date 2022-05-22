@@ -30,28 +30,33 @@ npm install --save phosphor-react
 Lib para consumir APIs
 npm install axios
 
+Lib para avisos
+npm install react-toastify
+
 ## TODO
 
 [x] Instalar pacote de icones
 [x] Instalar styled-components
-[x] Decidir cores do disign (amarelo e preto)
+[x] Decidir cores do disign (preto, cinza, branco e amarelo)
 [x] Criar componente NewCard
 [x] Criar componente Card
 [x] Criar componente EditCard
 [x] Criar componente Board
 [x] Fazer chamada as apis (axios)
 [x] Botão de plus funcionando
-
-[] chamar editcard quando clicar no Botão edit
-[] excluir card quando clicar no Botão excluir
-[] mudar 'lista' quando clicar no Botão de seta
-[] atualizar dados do card quando clicar no Botão de salvar
-[] chamar cards com map separado pelo valor do campo lista
-[] criar header do componente Board
+[x] excluir card quando clicar no Botão excluir
+[x] mudar 'lista' quando clicar no Botão de seta
+[x] chamar cards com map separado pelo valor do campo lista
+[x] criar header do componente Board
+[x] chamar editcard quando clicar no Botão edit
+[x] atualizar dados do card quando clicar no Botão de salvar
+[x] voltar dados do card quando clicar no Botão de cancelar
 
 [] Instalar toastify
 [] Tratar erros com toastify
 [] Tratar sucessos com toastify
-[] Adicionar responsividade ao projeto ??
+[] publicar front no vercel
+[] publicar o back ????
+[] Adicionar responsividade ao projeto ???
 [] Drag and drop???
 [] Testes?

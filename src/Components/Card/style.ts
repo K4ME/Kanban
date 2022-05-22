@@ -1,4 +1,8 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
+
+interface HeaderProps {
+  Status: string;
+}
 
 export const Container = styled.section`
   display: flex;
@@ -11,9 +15,10 @@ export const Container = styled.section`
   height: 12rem;
   background-color: #757575;
   border-radius: 0.313rem;
+  margin-top: 2rem;
 `;
 
-export const Header = styled.header`
+export const Header = styled.header<HeaderProps>`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -21,6 +26,33 @@ export const Header = styled.header`
   width: 100%;
   margin-top: 0.5rem;
   margin-left: 0.9rem;
+
+  label{
+
+    ${(props) =>
+      props.Status === 'ToDo' &&
+      css`
+        background-color: orange;
+        color: #282c34;        
+      `
+    }
+
+    ${(props) =>
+      props.Status === 'Doing' &&
+      css`
+        background-color: yellow;
+        color: #282c34;
+      `
+    }
+
+    ${(props) =>
+      props.Status === 'Done' &&
+      css`
+        background-color: greenyellow;
+        color: #282c34;
+      `
+    }
+  }
 
   button {
     width: 20%;
