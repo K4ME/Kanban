@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import { Plus } from "phosphor-react";
 
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 
 import {Container, Input, TextArea, PlusButton} from './style';
 import { createCard } from '../../Service/api';
@@ -10,35 +10,46 @@ export default function NewCard({cardAdd}: any) {
   const [title, setTitle] = useState<string>('');
   const [content, setContent] = useState<string>('');
 
-  //const sucesso = () => toast.success("sucesso", {autoClose: 2000});
-
   const handleTitleChange = (value: string) => {
-    console.log(value);
     setTitle(value);
   }
 
   const handleContentChange = (value: string) => {
-    console.log(value);
     setContent(value);
   }
 
+  const verifyCardContent = () => {
+    if(title === '' && content === ''){
+      toast.error("Título e conteúdo do Card em branco!");
+      return;
+    }
+
+    if(title === ''){
+      toast.error("Título do Card em branco!");
+      return;
+    }
+
+    if(content === ''){
+      toast.error("Conteúdo do Card em branco!");
+      return;
+    }
+  }
+
   const submitCard = async () => {
+    verifyCardContent();
+
     const response = await createCard({
       titulo: title, 
       conteudo: content, 
       lista: 'ToDo'
     });
 
-    console.log('response', response);
-
     if(response){
-      console.log('sucesso');
-      //sucesso();
+      toast.success("Card Criado com sucesso!");
       cardAdd(true);
       setTitle('');
       setContent('');
     }
-     
   }
 
   return (
@@ -48,7 +59,6 @@ export default function NewCard({cardAdd}: any) {
       <PlusButton onClick={submitCard}>
         <Plus size={32} weight="bold" />
       </PlusButton>
-      <ToastContainer />
     </Container>
     
   )

@@ -71,15 +71,28 @@ export default function Board() {
           {
             cards ? cards.map((card) => (
               card.lista === 'Doing' ? 
-              <Card 
-                key={card.id} 
-                id={card.id} 
-                titulo={card.titulo} 
-                conteudo={card.conteudo}
-                lista={card.lista}
-                cardAdd={setNewCard}
-                cardEdit={setEditCard}
-              />
+                editCard === true && idCard === card.id ? 
+                  <EditCard 
+                    key={card.id} 
+                    id={card.id} 
+                    titulo={card.titulo} 
+                    conteudo={card.conteudo}
+                    lista={card.lista}
+                    cardAdd={setNewCard}
+                    cardEdit={setEditCard}
+                    cardId={setIdCard}
+                  />
+
+                : <Card 
+                  key={card.id} 
+                  id={card.id} 
+                  titulo={card.titulo} 
+                  conteudo={card.conteudo}
+                  lista={card.lista}
+                  cardAdd={setNewCard}
+                  cardEdit={setEditCard}
+                  cardId={setIdCard}
+                />
               : <div />
             )) 
             : <div />
@@ -91,15 +104,28 @@ export default function Board() {
           {
             cards ? cards.map((card) => (
               card.lista === 'Done' ? 
-              <Card 
-                key={card.id} 
-                id={card.id} 
-                titulo={card.titulo} 
-                conteudo={card.conteudo}
-                lista={card.lista}
-                cardAdd={setNewCard}
-                cardEdit={setEditCard}
-              />
+                editCard === true && idCard === card.id ? 
+                  <EditCard 
+                    key={card.id} 
+                    id={card.id} 
+                    titulo={card.titulo} 
+                    conteudo={card.conteudo}
+                    lista={card.lista}
+                    cardAdd={setNewCard}
+                    cardEdit={setEditCard}
+                    cardId={setIdCard}
+                  />
+
+                : <Card 
+                  key={card.id} 
+                  id={card.id} 
+                  titulo={card.titulo} 
+                  conteudo={card.conteudo}
+                  lista={card.lista}
+                  cardAdd={setNewCard}
+                  cardEdit={setEditCard}
+                  cardId={setIdCard}
+                />
               : <div />
             )) 
             : <div />

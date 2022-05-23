@@ -1,11 +1,6 @@
 import axios from 'axios';
 
-interface cardType {
-  titulo : string, 
-  conteudo: string, 
-  lista: string,
-  id?: string
-}
+import {CardType} from '../Types/CardType';
 
 async function getToken() {
   try {
@@ -29,7 +24,7 @@ export async function getCards() {
   }
 }
 
-export async function createCard(data: cardType) {
+export async function createCard(data: CardType) {
   try {
     const response = await axios.post('http://localhost:5000/cards',
     data,
@@ -42,7 +37,7 @@ export async function createCard(data: cardType) {
   }
 }
 
-export async function updateCard(data: cardType) {
+export async function updateCard(data: CardType) {
   try {
     const response = await axios.put(`http://localhost:5000/cards/${data.id}`,
     data,

@@ -1,20 +1,19 @@
 import React, {useState} from 'react'
 import { Prohibit, FloppyDisk } from "phosphor-react";
+import { toast } from 'react-toastify';
 
 import {Container, Footer, Input, TextArea} from './style';
 import { updateCard } from '../../Service/api';
 
 export default function EditCard({id, titulo, conteudo, lista, cardAdd, cardEdit, cardId}: any) {
-  const [title, setTitle] = useState<string>('');
-  const [content, setContent] = useState<string>('');
+  const [title, setTitle] = useState<string>(titulo);
+  const [content, setContent] = useState<string>(conteudo);
 
   const handleTitleChange = (value: string) => {
-    console.log(value);
     setTitle(value);
   }
 
   const handleContentChange = (value: string) => {
-    console.log(value);
     setContent(value);
   }
 
@@ -28,6 +27,7 @@ export default function EditCard({id, titulo, conteudo, lista, cardAdd, cardEdit
     cardEdit(false);
     cardId('');
     cardAdd(true);
+    toast.success("Card editado com sucesso!");
   }
 
   const handleCancel = async () => {
@@ -37,8 +37,8 @@ export default function EditCard({id, titulo, conteudo, lista, cardAdd, cardEdit
 
   return (
     <Container>
-      <Input type="text" placeholder="Título" onChange={(e) => handleTitleChange(e.target.value)}/>
-      <TextArea placeholder="Conteúdo" onChange={(e) => handleContentChange(e.target.value)}/>
+      <Input type="text" value={title} placeholder="Título" onChange={(e) => handleTitleChange(e.target.value)}/>
+      <TextArea value={content} placeholder="Conteúdo" onChange={(e) => handleContentChange(e.target.value)}/>
       <Footer>
         <button onClick={handleCancel}>
           <Prohibit size={32} weight="bold" />

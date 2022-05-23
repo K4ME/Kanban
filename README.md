@@ -51,12 +51,12 @@ npm install react-toastify
 [x] chamar editcard quando clicar no Botão edit
 [x] atualizar dados do card quando clicar no Botão de salvar
 [x] voltar dados do card quando clicar no Botão de cancelar
+[x] Instalar toastify
+[x] Tratar erros com toastify
+[x] Tratar sucessos com toastify
 
-[] Instalar toastify
-[] Tratar erros com toastify
-[] Tratar sucessos com toastify
 [] publicar front no vercel
-[] publicar o back ????
-[] Adicionar responsividade ao projeto ???
-[] Drag and drop???
-[] Testes?
+[] publicar o back
+[] Adicionar responsividade ao projeto
+[] Drag and drop
+[] Testes

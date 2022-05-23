@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import { ArrowFatLeft, ArrowFatRight, Trash, NotePencil } from "phosphor-react";
+import { toast } from 'react-toastify';
 
 import {Container, Header, Footer, Label, TextArea} from './style';
 import { deleteCard, updateCard } from '../../Service/api';
@@ -22,34 +23,39 @@ export default function Card({id, titulo, conteudo, lista, cardAdd, cardEdit, ca
 
   const handleLeftButton = async () => {
     if(lista === 'ToDo')
-      console.log('Não pode voltar o status');
-    
+      toast.error("Alteração de status não permitida!");
+          
     if(lista === 'Doing'){
       updateCardStatus('ToDo');
+      toast.success("Card alterado com sucesso!");
     }
 
     if(lista === 'Done'){
       updateCardStatus('Doing');
+      toast.success("Card alterado com sucesso!");
     }
   }
 
   const handleRightButton = async () => {
     if(lista === 'ToDo'){
       updateCardStatus('Doing');
+      toast.success("Card alterado com sucesso!");
     }
 
     if(lista === 'Doing'){
       updateCardStatus('Done');
+      toast.success("Card alterado com sucesso!");
     }
 
     if(lista === 'Done'){
-      console.log('Não há mais status parta avançar!');
+      toast.error("Alteração de status não permitida!");
     }
   }
 
   const handleTrashButton = async () => {
     await deleteCard(id);
     cardAdd(true);
+    toast.success("Card excluído com sucesso!");
   }
 
   const handleEditButton = async () => {
