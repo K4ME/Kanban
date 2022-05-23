@@ -1,30 +1,32 @@
 # Kanban clone
 
-## cores para usar
+<p align="center">
+  Desafio frontend let's code 👩‍💻
+</p>
+<p align="center">
+  Verifique funcionando: <a href="https://kanban-herbaol15-k4me.vercel.app/"> Kanban clone </a>
+</p>
 
-yellow #f1c40f
-black #121212
-gray #757575
+<br/>
+<p align="center">
+  <img alt="Board" src="./print/board.png" width="720"/>
+</p>
 
-## link do desafio
+## link do desafio frontend
 
 https://gitlab.com/gabriel.militello1/desafio-tecnico-frontend
 
-## Criando Projeto usando Vite
+## Libs utilizadas
 
-https://vitejs.dev/guide/#community-templates
-
+Criando projeto
 npm create vite@latest kanban-board --template react-ts
 npm install
-
-Para rodar o projeto
-npm run dev
 
 Instalando styled-components
 npm install styled-components
 npm i -D @types/styled-components
 
-Instalando lib de icons
+Instalando lib de icones
 npm install --save phosphor-react
 
 Lib para consumir APIs
@@ -33,8 +35,31 @@ npm install axios
 Lib para avisos
 npm install react-toastify
 
+## 🚀 Tecnologias
+
+- [ReactJS](https://reactjs.org/)
+- [styled-components](https://styled-components.com/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Vitejs](https://vitejs.dev/)
+- [Axios](https://axios-http.com/ptbr/docs/intro)
+
+## 💻 Iniciando
+
+Primeiro, clone o projeto:
+
+    git clone git@github.com:K4ME/Kanban.git
+
+Instale as dependências
+
+    npm install
+
+Rode
+
+    npm run dev
+
 ## TODO
 
+<p align="center">
 [x] Instalar pacote de icones
 [x] Instalar styled-components
 [x] Decidir cores do disign (preto, cinza, branco e amarelo)
@@ -54,9 +79,15 @@ npm install react-toastify
 [x] Instalar toastify
 [x] Tratar erros com toastify
 [x] Tratar sucessos com toastify
+[x] publicar front no vercel
 
-[] publicar front no vercel
 [] publicar o back
 [] Adicionar responsividade ao projeto
 [] Drag and drop
 [] Testes
+
+</p>
+
+<p align="center">
+  Made with 💜 by <a href="https://www.linkedin.com/in/guilhermemacrini/">Guilherme Macrini</a>
+</p>
