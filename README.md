@@ -64,7 +64,7 @@ Rode
 
 ## TODO
 
-<p align="center">
+<p align="start">
 [x] Instalar pacote de icones<br/>
 [x] Instalar styled-components<br/>
 [x] Decidir cores do disign (preto, cinza, branco e amarelo)<br/>
