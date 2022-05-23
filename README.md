@@ -19,21 +19,26 @@ https://gitlab.com/gabriel.militello1/desafio-tecnico-frontend
 ## Libs utilizadas
 
 Criando projeto
-npm create vite@latest kanban-board --template react-ts
-npm install
+
+    npm create vite@latest kanban-board --template react-ts
+    npm install
 
 Instalando styled-components
-npm install styled-components
-npm i -D @types/styled-components
+
+    npm install styled-components
+    npm i -D @types/styled-components
 
 Instalando lib de icones
-npm install --save phosphor-react
+
+    npm install --save phosphor-react
 
 Lib para consumir APIs
-npm install axios
+
+    npm install axios
 
 Lib para avisos
-npm install react-toastify
+
+    npm install react-toastify
 
 ## 🚀 Tecnologias
 
@@ -60,31 +65,31 @@ Rode
 ## TODO
 
 <p align="center">
-[x] Instalar pacote de icones
-[x] Instalar styled-components
-[x] Decidir cores do disign (preto, cinza, branco e amarelo)
-[x] Criar componente NewCard
-[x] Criar componente Card
-[x] Criar componente EditCard
-[x] Criar componente Board
-[x] Fazer chamada as apis (axios)
-[x] Botão de plus funcionando
-[x] excluir card quando clicar no Botão excluir
-[x] mudar 'lista' quando clicar no Botão de seta
-[x] chamar cards com map separado pelo valor do campo lista
-[x] criar header do componente Board
-[x] chamar editcard quando clicar no Botão edit
-[x] atualizar dados do card quando clicar no Botão de salvar
-[x] voltar dados do card quando clicar no Botão de cancelar
-[x] Instalar toastify
-[x] Tratar erros com toastify
-[x] Tratar sucessos com toastify
-[x] publicar front no vercel
+[x] Instalar pacote de icones<br/>
+[x] Instalar styled-components<br/>
+[x] Decidir cores do disign (preto, cinza, branco e amarelo)<br/>
+[x] Criar componente NewCard<br/>
+[x] Criar componente Card<br/>
+[x] Criar componente EditCard<br/>
+[x] Criar componente Board<br/>
+[x] Fazer chamada as apis (axios)<br/>
+[x] Botão de plus funcionando<br/>
+[x] excluir card quando clicar no Botão excluir<br/>
+[x] mudar 'lista' quando clicar no Botão de seta<br/>
+[x] chamar cards com map separado pelo valor do campo lista<br/>
+[x] criar header do componente Board<br/>
+[x] chamar editcard quando clicar no Botão edit<br/>
+[x] atualizar dados do card quando clicar no Botão de salvar<br/>
+[x] voltar dados do card quando clicar no Botão de cancelar<br/>
+[x] Instalar toastify<br/>
+[x] Tratar erros com toastify<br/>
+[x] Tratar sucessos com toastify<br/>
+[x] publicar front no vercel<br/>
 
-[] publicar o back
-[] Adicionar responsividade ao projeto
-[] Drag and drop
-[] Testes
+[] publicar o back<br/>
+[] Adicionar responsividade ao projeto<br/>
+[] Drag and drop<br/>
+[] Testes<br/>
 
 </p>
 
